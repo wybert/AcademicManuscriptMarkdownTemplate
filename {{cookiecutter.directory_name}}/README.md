@@ -66,19 +66,6 @@ pandoc -s -f markdown -t docx --filter=pandoc-crossref --filter=pandoc-citeproc 
 5. Edit the files in the 'source' directory, then goto step 4.
 
 
-# For cookiecutter user 
-
-```bash
-pip install cookiecutter
-```
-
-Move to a directory where you want to create the new project,then
-
-```bash
-cookiecutter https://github.com/wybert/AcademicManuscriptMarkdownTemplate.git
-
-```
-
 
 
 # Contributing
