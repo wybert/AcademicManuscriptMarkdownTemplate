@@ -11,7 +11,7 @@ for i,item in enumerate(outline):
         # print(type(item))
 
         if type(item) != type({}):
-            fileName = str(i) + "_" + item.replace(" ","_") + ".md"
+            fileName = "./drafts/" + str(i) + "_" + item.replace(" ","_") + ".md"
             with open(fileName,'w',encoding = "utf-8") as filehandler:
                 filehandler.write("## " + item)
                 filehandler.write("\n")
@@ -19,7 +19,7 @@ for i,item in enumerate(outline):
         else:
             for k,v in item.items():
                 # print(k,v)
-                fileName = str(i) + "_" + k.replace(" ","_") + ".md"
+                fileName = "./drafts/" + str(i) + "_" + k.replace(" ","_") + ".md"
                 with open(fileName,'w',encoding = "utf-8") as filehandler:
                     filehandler.write("## " + k)
                     filehandler.write("\n")
