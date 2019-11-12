@@ -58,8 +58,14 @@ cat drafts/*.md > output/out.md
 
 ```
 
+Doc
 ```bash
-pandoc -s -f markdown -t docx --filter=pandoc-crossref --filter=pandoc-citeproc --bibliography=my.bib --csl=chinese-gb7714-2005-numeric.csl -o out/out.docx  output/out.md
+pandoc -s -f markdown -t docx --filter=pandoc-crossref --resource-path=figs --filter=pandoc-citeproc --bibliography=my.bib --csl=chinese-gb7714-2005-numeric.csl output/out.md -o out/out.docx
+```
+
+PDF
+```bash
+pandoc -s -f markdown --pdf-engine=xelatex -V CJKmainfont='WenQuanYi Micro Hei Mono'  --filter=pandoc-crossref --resource-path=figs --filter=pandoc-citeproc --bibliography=my.bib --csl=chinese-gb7714-2005-numeric.csl output/out.md -o out/out.pdf
 ```
 
 
