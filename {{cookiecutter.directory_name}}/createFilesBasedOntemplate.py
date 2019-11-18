@@ -3,7 +3,7 @@ import yaml
 
 # outline = yaml.load(open('PHDThesis.yml',encoding="utf-8"))
 
-outline = yaml.load(open('./academicManuscript.yml',encoding="utf-8"))
+outline = yaml.load(open('./outlines/academicManuscriptOutlineTemplate.yml',encoding="utf-8"))
 
 
 for i,item in enumerate(outline):
